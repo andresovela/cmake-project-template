@@ -1,4 +1,3 @@
-enable_testing()
 include(CTest)
 
 set(TEST_FILES
@@ -17,4 +16,4 @@ add_executable(example2_app ${TEST_FILES} ${SOURCE_FILES})
 target_include_directories(example2_app PUBLIC ${INCLUDE_PATHS})
 target_link_libraries(example2_app unity)
 
-add_test(suite_example2 example2_app)
+add_test(NAME suite_example2 COMMAND example2_app WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
