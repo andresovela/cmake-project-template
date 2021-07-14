@@ -1,7 +1,7 @@
 include(CTest)
 
 set(TEST_NAME example2)
-set(TEST_EXECUTABLE_NAME ${TEST_NAME}_app)
+set(TEST_EXECUTABLE_NAME test_${TEST_NAME})
 
 set(TEST_FILES
     ${CMAKE_SOURCE_DIR}/tests/example2/test_example2.c
